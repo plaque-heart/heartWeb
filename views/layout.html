@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/main.css">
+        <title><%block name ="pageTitle"/></title>
+        <%block name= "headExtra"/>
+    </head>
+    <body>
+        <header>
+          <nav>
+              <ul>
+                <li><a href="/"><span class="Home">Home</span></a></li>
+                <li><a href="Blender.html"><span class="Blender">Models</span></a></li>
+                <li><a href="Animation.html"><span class="Animation">Animations</span></a></li>
+                <li><a href="Simulation.html"><span class="Simulation">Simulation</span></a></li>
+                <li><a href="movie.html"><span class="Movie">Our Movie</span></a></li>
+                <li><a href="Resources.html"><span class="Resources">What Resources??</span></a></li>
+              </ul>
+          </nav>
+        </header>
+        <%block name="pageBody"/>
+    </body>
+</html>

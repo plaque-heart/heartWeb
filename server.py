@@ -5,7 +5,6 @@ from siteSettings import Site
 
 hellostr= """<h1>Hello {}</h1>"""
 
-
 @route('/static/<path:path>')
 def static(path):
     return static_file(path,root=Site.staticRoot)
