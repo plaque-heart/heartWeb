@@ -2,28 +2,13 @@
 <%block name="pageTitle">The Heart|The Team</%block>
 
 <%block name="pageBody">
-<%def name="kaya()">
-    ## kaya type description below:|
-##                                 v
-    Kaya's decription will be up soon.........
-</%def>
-
-<%def name="sophie()">
-    I am a expert in programming. I have won lot of competitions in programming and science.
-     I am also really good at Unity making quite a few really fun games, and even hooking one up to the oculus!
-     I love to make webpages from pure html and css and with bottle and python.
-    I have a passion for science and love going to science lectures at the University of NSW and University of Sydney
-     my favorite one was on neutrinos, tiny atmosphophic particles.  I love to Learn new exciting things. That pretty much sums me up,
-     oh wait I nearly forgot, I love to eat chocolate.
-</%def>
 <h1>The Team</h1>
 <div class="people">
-    <img src="static/kaya.jpg" alt="kaya" class="image">
-    <h2>Kaya</h2>
-    ${kaya()}
-    <br><br><br><br><br><br><br><br><br><br>
-    <img src="static/sophie.jpg" alt="sophie" class="image">
-    <h2>Sophie</h2>
-    ${sophie()}
-    </div>
+% for i in people:
+    <img src="/image/people/${i.name}" alt="picture" class="image">
+    <h2>${i.name}</h2>
+    ${i.information}
+    <br><br><br><br><br><br><br>
+% endfor
+</div>
 </%block>
