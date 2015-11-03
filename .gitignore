@@ -4,7 +4,6 @@ __pycache__/
 
 #special for this project
 siteSettings.py
-testchange.py
 
 # C extensions
 *.so
