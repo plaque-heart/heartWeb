@@ -10,14 +10,15 @@ hellostr= """<h1>Hello {}</h1>"""
 
 SQLBase = automap_base()
 
-engine = sqlalchemy.create_engine("sqlite:///dbase.db", echo=True)
+engine = sqlalchemy.create_engine(Site.engine, echo=True)
 session=sessionmaker(bind=engine)()
 
 SQLBase.prepare(engine, reflect=True)
 People=SQLBase.classes.people
 
+@route('/info-particles3.txt')
 @route('/static/<path:path>')
-def static(path):
+def static(path='info-particles3.txt'):
     return static_file(path,root=Site.staticRoot)
 
 @route('/people')

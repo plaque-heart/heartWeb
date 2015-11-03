@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 * { box-sizing: border-box; }
 nav {
   background-color: grey; 
@@ -14,14 +15,18 @@ nav > ul > li > a {
   color: white;
   text-decoration: none;
 }
-body {
+body{
     text-align: center;
 }
 h1, h2, h3, h4, p {
     font-family: 'Poiret One';
+    max-width: 800px;
+    vertical-align: middle;
+    margin-left: 310px;
 }
 h1 {
     font-style: bold;
+    text-align: center;
 }
 .people {
   text-align: left;
