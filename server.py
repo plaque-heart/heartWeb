@@ -24,10 +24,11 @@ def static(path='info-particles3.txt'):
 @route('/people')
 @route('/people/<who>')
 def theTeam(who=None):
+    people=session.query(People).order_by(People.name)
     if who:
-        people=session.query(People).filter(People.group==who).all()
+        people=people.filter(People.group==who).all()
     else:
-        people=session.query(People).all()
+        people=people.all()
     return template('team.html',people=people)
 
 @route('/image/people/<name>')
