@@ -82,3 +82,7 @@ h1 {
   height:150px;
   float: right;
 }
+.unity-screen {
+  width:750px;
+  height:650px;
+}
