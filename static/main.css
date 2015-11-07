@@ -10,7 +10,9 @@ nav > ul {
 }
 nav > ul > li {
   display: inline-block;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  min-width: 150px;
 }
 nav > ul > li > a {
   color: white;
@@ -74,9 +76,6 @@ h1 {
 .image {
   width:200px;
   height:200px;
-}
-.time {
-  text-align: right;
 }
 .graph {
   width:150px;
