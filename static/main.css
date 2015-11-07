@@ -6,6 +6,7 @@ nav {
 }
 nav > ul {
   padding: 0px;
+  color: white;
 }
 nav > ul > li {
   display: inline-block;
@@ -14,33 +15,6 @@ nav > ul > li {
 nav > ul > li > a {
   color: white;
   text-decoration: none;
-}
-body{
-    text-align: center;
-}
-h1, h2, h3, h4, p {
-    font-family: 'Poiret One';
-    max-width: 800px;
-    vertical-align: middle;
-    margin-left: 310px;
-}
-h1 {
-    font-style: bold;
-    text-align: center;
-}
-.people {
-  text-align: left;
-  clear: right;
-}
-.people > img {
-  float: left;
-}
-.image {
-  width:200px;
-  height:200px;
-}
-.time {
-  text-align: right;
 }
 nav > ul > li > ul {
   background-color: grey;
@@ -57,4 +31,55 @@ nav > ul > li > ul > li:hover {
 }
 nav > ul > li:hover > ul {
   display: block;
+}
+body{
+    text-align: center;
+    font-family: 'Poiret One';
+}
+h1, h2, h3, h4, p{
+    max-width: 800px;
+    vertical-align: middle;
+    margin-left: 310px;
+}
+h1 {
+    font-style: bold;
+    text-align: center;
+}
+.save-lives {
+  padding-bottom: 10px;
+}
+.save-lives > article{
+  display: inline-block;
+  width: 280px;
+  vertical-align: top;
+}
+.save-lives > article >img{
+  width: 150px;
+  padding-left: 10px;
+}
+.save-lives > article > div > p {
+  margin-left: 0;
+}
+.save-lives > article > div > h2 {
+  margin-left: 0;
+  
+}
+.people {
+  text-align: left;
+  clear: right;
+}
+.people > img {
+  float: left;
+}
+.image {
+  width:200px;
+  height:200px;
+}
+.time {
+  text-align: right;
+}
+.graph {
+  width:150px;
+  height:150px;
+  float: right;
 }
