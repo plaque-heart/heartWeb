@@ -3,8 +3,7 @@
 <%block name="pageBody">
 <h1>Models</h1>
 <h2>Blender Models of the Artery</h2>
-% for num,image in enumerate(("screenblendereditmode","screenblendgadges", \
-                        "arteryplaqueinsideblend" ,"arteryplaqueblendinsidecloseup")):
+% for num,image in enumerate(["screenblendereditmode","screenblendgadges", "arteryplaqueinsideblend" ,"arteryplaqueblendinsidecloseup"]):
 <img src=${"static/" +image+ ".png"} alt='Image1' width="300" height="300">
 % endfor 
 <p>

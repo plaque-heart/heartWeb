@@ -24,6 +24,7 @@ nav > ul > li > ul {
   padding: 0;
   position: absolute;
   display: none;
+  min-width: 150px;
 }
 nav > ul > li:hover {
   background-color: none;
@@ -81,8 +82,19 @@ h1 {
   width:150px;
   height:150px;
   float: right;
+  margin-top: -40px;
 }
 .unity-screen {
-  width:750px;
-  height:650px;
+  width:400px;
+  height:400px;
+  /* float: left; */
+}
+.oculus {
+  width:400px;
+  height:400px;
+  /* float: right; */
+}
+.results {
+  width:400px;
+  height:350px;
 }
