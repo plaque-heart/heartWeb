@@ -16,6 +16,7 @@ session=sessionmaker(bind=engine)()
 SQLBase.prepare(engine, reflect=True)
 People=SQLBase.classes.people
 Resources =SQLBase.classes.resources
+Resinfo = SQLBase.classes.resinfo
 
 @route('/info-particles3.txt')
 @route('/static/<path:path>')
@@ -34,13 +35,11 @@ def theTeam(who=None):
 
 @route('/Resources')
 @route('/Resources/<what>')
-def theTeam(what=None):
-    resources=session.query(Resources).order_by(Resources.name)
-    '''if what:
-        people=people.filter(People.group==what).all()
-    else:'''
+def theRes(what='unity'):
+    resources=session.query(Resources).order_by(Resources.sort)
+    resinfo=session.query(Resinfo).filter(Resinfo.name==what).all()[0]
     resources=resources.all()
-    return template('Resources.html',resources=resources)
+    return template('Resources.html',resources=resources,resinfo=resinfo)
 
 @route('/image/people/<name>')
 def picture(name):

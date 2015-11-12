@@ -1,12 +1,28 @@
 <%inherit file="layout.html"/>
 <%block name="pageTitle">The Heart|Resoures</%block>
 <%block name="pageBody">
-        <h1>The Resoures we used to make our project</h1>
-        <p>
-            <ul>
-                % for i in resources:
-                    <li>${i.description}    <a href="${i.link}">${i.name}</a></li>
-                % endfor
-            </ul>
-        </p>
+<h1>The Resoures we used to make our project</h1>
+<section class='resources'>
+    <article>
+        <div>
+
+            <p>
+                <ol>
+                    % for i in resources:
+                        <li>${i.description}    <a href="/Resources/${i.resinfo}">${i.name}</a></li>
+                    % endfor
+                </ol>
+            </p>
+        </div>
+    </article>
+</section>
+<div class="resinfo">
+ <a href="${i.link}" target="_blank">${i.name}</a>
+<br>
+${resinfo.description}
+%if resinfo.linkimg:
+    <img alt="${i.name}" src="${resinfo.linkimg}" target="_blank">
+%endif
+</div>
+
 </%block>

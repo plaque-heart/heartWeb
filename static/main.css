@@ -67,6 +67,22 @@ h1 {
   margin-left: 0;
   
 }
+.resources {
+  padding-bottom: 10px;
+}
+.resources > article{
+  display: inline-block;
+  text-align: left;
+  width: 680px;
+  vertical-align: top;
+}
+.resources > article >img{
+  width: 150px;
+  padding-left: 10px;
+}
+.resources > article > div > p {
+  margin-left: 0;
+}
 .people {
   text-align: left;
   clear: right;
