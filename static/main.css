@@ -83,6 +83,13 @@ h1 {
 .resources > article > div > p {
   margin-left: 0;
 }
+.resources > artilce > div{
+  margin-left: 80px;
+}
+.resources > article > div > h2 {
+  margin-left: 0;
+  
+}
 .people {
   text-align: left;
   clear: right;
