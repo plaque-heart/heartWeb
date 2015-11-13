@@ -111,7 +111,28 @@ h1 {
 }
 .video > article > div > h2 {
   margin-left: 0;
-  
+}
+.video {
+  padding-bottom: 10px;
+}
+.simul > article{
+  display: inline-block;
+  text-align: left;
+  width: 350px;
+  vertical-align: top;
+}
+.simul > article > div > img{
+  width: 250px;
+  padding-left: 10px;
+}
+.simul > article > div > p {
+  margin-left: 0;
+}
+.simul > artilce > div{
+  margin-left: 80px;
+}
+.simul > article > div > h2 {
+  margin-left: 0;  
 }
 .people {
   text-align: left;
