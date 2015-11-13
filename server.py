@@ -35,11 +35,12 @@ def theTeam(who=None):
 
 @route('/Resources')
 @route('/Resources/<what>')
-def theRes(what='unity'):
+def theRes(what='Unity5'):
     resources=session.query(Resources).order_by(Resources.sort)
-    resinfo=session.query(Resinfo).filter(Resinfo.name==what).all()[0]
+    here= session.query(Resources).filter(Resources.name==what)[0]
+    resinfo=session.query(Resinfo).filter(Resinfo.name==here.resinfo).all()[0]
     resources=resources.all()
-    return template('Resources.html',resources=resources,resinfo=resinfo)
+    return template('Resources.html',resources=resources,resinfo=resinfo,row=here)
 
 @route('/image/people/<name>')
 def picture(name):

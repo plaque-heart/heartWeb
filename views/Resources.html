@@ -9,7 +9,7 @@
             <p>
                 <ol>
                     % for i in resources:
-                        <li>${i.description}    <a href="/Resources/${i.resinfo}">${i.name}</a></li>
+                        <li>${i.description}    <a href="/Resources/${i.name}">${i.name}</a></li>
                     % endfor
                 </ol>
             </p>
@@ -17,7 +17,7 @@
     </article>
 </section>
 <div class="resinfo">
- <a href="${i.link}" target="_blank">${i.name}</a>
+ <a href="${row.link}" target="_blank">${row.name}</a>
 <br>
 ${resinfo.description}
 %if resinfo.linkimg:
