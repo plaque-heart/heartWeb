@@ -90,6 +90,29 @@ h1 {
   margin-left: 0;
   
 }
+.video {
+  padding-bottom: 10px;
+}
+.video > article{
+  display: inline-block;
+  text-align: left;
+  width: 480px;
+  vertical-align: top;
+}
+.video > article >img{
+  width: 150px;
+  padding-left: 10px;
+}
+.video > article > div > p {
+  margin-left: 0;
+}
+.video > artilce > div{
+  margin-left: 80px;
+}
+.video > article > div > h2 {
+  margin-left: 0;
+  
+}
 .people {
   text-align: left;
   clear: right;
