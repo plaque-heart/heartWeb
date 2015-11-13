@@ -7,30 +7,29 @@
     <h2>Our project is Open-Source</h2>
     <article>
         <div>
-            <h2>How to get it down from Github</h2>
+            <h2>Instructions</h2>
             <p>
-                <ol>
-                    <li><a href="https://github.com/plaque-heart/Heart-Model" target="_blank">Click here</a> so you can access our github page</li>
-                    <li>Press the button "download zip"</li>
-                </ol>
-                When downloaded move on to the next colunm
+%for i in instruct:                    
+                <a href="/instruct/${i.key}">${i.desc}</a><br>
+%endfor
+                When done what you need to do move on to the next colunm intill finshed
             </p>
         </div>
     </article>
     <article>
         <div>
-            <h2>Once dowloaded:<br>How to use and edit</h2>
+            <h2>${row.title}</h2>
             <p>
                 <ol>
-                    <li>Unzip the file</li>
-                    <li>Track the file into a folder you want it to be in</li>
-                    <li>Download <a href="http://unity3d.com/" target="_blank">Unity</a> if you have not already got Unity</li>
-                    <li>Once downloaded Unity, open the scene called "artery" and edit!</li>
+%for i in row.points.split('|'):
+                    <li class="points">${i}</li>
+%endfor
                 </ol>
                 When done that move on to the next colunm
             </p>
         </div>
     </article>
+<%doc>
     <article>
         <div>
             <h2>How to Suggest changes and improvementes to us</h2>
@@ -45,5 +44,6 @@
             </p>
         </div>
     </article>
+</%doc>
 </section>
 </%block>

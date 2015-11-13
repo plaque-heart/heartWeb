@@ -17,6 +17,7 @@ SQLBase.prepare(engine, reflect=True)
 People=SQLBase.classes.people
 Resources =SQLBase.classes.resources
 Resinfo = SQLBase.classes.resinfo
+Instruct = SQLBase.classes.instruct
 
 @route('/info-particles3.txt')
 @route('/static/<path:path>')
@@ -41,6 +42,15 @@ def theRes(what='Unity5'):
     resinfo=session.query(Resinfo).filter(Resinfo.name==here.resinfo).all()[0]
     resources=resources.all()
     return template('Resources.html',resources=resources,resinfo=resinfo,row=here)
+
+@route('/instruct')
+@route('/instruct/<what>')
+def instruct(what='use'):
+    instruct=session.query(Instruct).order_by(Instruct.sort)
+    here= session.query(Instruct).filter(Instruct.key==what)[0]
+    instruct=instruct.all()
+    return template('instruct.html',instruct=instruct,row=here)
+    
 
 @route('/image/people/<name>')
 def picture(name):
