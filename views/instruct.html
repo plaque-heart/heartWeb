@@ -7,12 +7,12 @@
     <h2>Our project is Open-Source</h2>
     <article>
         <div>
-            <h2>Instructions</h2>
+            <h2>Instructions and Documentation</h2>
             <p>
 %for i in instruct:                    
                 <a href="/instruct/${i.key}">${i.desc}</a><br>
 %endfor
-                When done what you need to do move on to the next colunm intill finshed
+                When done what you need to do move on to the next link until finshed
             </p>
         </div>
     </article>
@@ -25,25 +25,8 @@
                     <li class="points">${i}</li>
 %endfor
                 </ol>
-                When done that move on to the next colunm
             </p>
         </div>
     </article>
-<%doc>
-    <article>
-        <div>
-            <h2>How to Suggest changes and improvementes to us</h2>
-            <p>
-                <ol>
-                    <li>Make your own account on <a href="https://github.com/" target="_blank">Github</a></li>
-                    <li>Do a fork from our respository</li>
-                    <li>Commit you changes</li>
-                    <li>Then when you are done do a "pull request"</li>
-                </ol>
-                Then You are done!
-            </p>
-        </div>
-    </article>
-</%doc>
 </section>
 </%block>

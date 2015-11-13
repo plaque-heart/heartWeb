@@ -17,12 +17,16 @@
     </article>
 </section>
 <div class="resinfo">
- <a href="${row.link}" target="_blank">${row.name}</a>
-<br>
-${resinfo.description}
-%if resinfo.linkimg:
-    <img alt="${i.name}" src="${resinfo.linkimg}" target="_blank">
-%endif
-</div>
-
+<p>
+    <h1><a href="${row.link}" target="_blank">${row.name}</a></h1>
+    <br>
+    ${resinfo.description}
+    <br><br>
+%for img in [resinfo.linkimg,resinfo.linkim2]:
+    %if img:
+    <img alt="${i.name}" src="${img}" target="_blank" class="resimg">
+    %endif
+%endfor
+    </div>
+</p>
 </%block>

@@ -124,3 +124,10 @@ h1 {
 .points {
   text-align: left;
 }
+.unityImage {
+  width:650px;
+  height:550px;
+}
+.resimg {
+  max-height:200px;
+}
