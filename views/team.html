@@ -2,7 +2,7 @@
 <%block name="pageTitle">The Heart|The Team</%block>
 
 <%block name="pageBody">
-<h1>The Team</h1>
+<h1>${title}</h1>
 <div class="people">
 % for i in people:
     <img src="/image/people/${i.name}" alt="picture" class="image">
@@ -10,7 +10,7 @@
     <b>${i.title}</b>
     <br>
     ${i.information}
-    <br><br><br><br><br><br><br><br>
+    <br><br><br><br>
 % endfor
 </div>
 </%block>

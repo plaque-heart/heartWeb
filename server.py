@@ -29,10 +29,17 @@ def static(path='info-particles3.txt'):
 def theTeam(who=None):
     people=session.query(People).order_by(People.name)
     if who:
-        people=people.filter(People.group==who).all()
+        test=people.filter(People.group==who).all()
+        if test:
+            people=test
+            title='The Team'
+        else:
+            people=people.filter(People.name==who).all()
+            title=who
     else:
         people=people.all()
-    return template('team.html',people=people)
+        title='Everybody'
+    return template('team.html',people=people ,title=title)
 
 @route('/Resources')
 @route('/Resources/<what>')
