@@ -43,6 +43,7 @@ h1, h2, h3, h4, p{
     max-width: 800px;
     vertical-align: middle;
     margin-left: 310px;
+    text-align: center;
 }
 h1 {
     font-style: bold;
@@ -174,4 +175,10 @@ h1 {
 }
 .resimg {
   max-height:200px;
+}
+.story {
+  text-align: left;
+  display: inline-block;
+  width: 800px;
+  vertical-align: top;
 }
