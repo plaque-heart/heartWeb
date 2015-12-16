@@ -144,7 +144,7 @@ h1 {
 }
 .image {
   width:200px;
-  height:200px;
+  /* height:200px; */
 }
 .graph {
   width:150px;
